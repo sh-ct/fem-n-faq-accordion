@@ -5,36 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/CSS/styles.css">
   <title>Frontend Mentor | FAQ Accordion Card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  How many team members can I invite?
-  You can invite up to 2 additional users on the Free plan. There is no limit on 
-  team members for the Premium plan.
+  <main>
+    <picture>
+      <source srcset="images/illustration-woman-online-desktop.svg 472w" media="(min-width: 600px)">
+      <img src="images/illustration-woman-online-mobile.svg" alt="">
+    </picture>
 
-  What is the maximum file upload size?
-  No more than 2GB. All files in your account must fit your allotted storage space.
+    <section class="faq">
+      <h1 class="heading">FAQ</h1>
+      <div class="accordion">
 
-  How do I reset my password?
-  Click “Forgot password” from the login page or “Change password” from your profile page.
-  A reset link will be emailed to you.
+        <div class="accordion-item">
+          <input type="radio" name="faq" id="team-members">
+          <label for="team-members">How many team members can I invite?</label>
+          <div class="accordion-content">
+            <p>
+              You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+            </p>
+          </div>
+        </div>
 
-  Can I cancel my subscription?
-  Yes! Send us a message and we’ll process your request no questions asked.
+        <div class="accordion-item">
+          <input type="radio" name="faq" id="accord-members">
+          <label for="accord-members">What is the maximum file upload size?</label>
+          <div class="accordion-content">
+            <p>
+              No more than 2GB. All files in your account must fit your allotted storage space.
+            </p>
+          </div>
+        </div>
 
-  Do you provide additional support?
-  Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        <div class="accordion-item">
+          <input type="radio" name="faq" id="accord-pass">
+          <label for="accord-pass">How do I reset my password?</label>
+          <div class="accordion-content">
+            <p>
+              Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.
+            </p>
+          </div>
+        </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        <div class="accordion-item">
+          <input type="radio" name="faq" id="accord-cancel">
+          <label for="accord-cancel">Can I cancel my subscription?</label>
+          <div class="accordion-content">
+            <p>
+              Yes! Send us a message and we’ll process your request no questions asked.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <input type="radio" name="faq" id="accord-support">
+          <label for="accord-support">Do you provide additional support?</label>
+          <div class="accordion-content">
+            <p>
+              Chat and email support is available 24/7. Phone lines are open during normal business hours.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
 </body>
 </html>

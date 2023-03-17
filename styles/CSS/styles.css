@@ -1,0 +1,149 @@
+/* CSS Reset */
+/* 1. Use a more-intuitive box-sizing model. */
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+/* 2. Remove default margin */
+* {
+  margin: 0; }
+
+/* 3. Allow percentage-based heights in the application */
+html, body {
+  height: 100%; }
+
+/* Typographic tweaks! Add accessible line-height & Improve text rendering */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; }
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%; }
+
+/* 7. Remove built-in form typography styles */
+input, button, textarea, select {
+  font: inherit; }
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word; }
+
+/* Variables */
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #1d1e35;
+  background: url(../../images/bg-pattern-mobile.svg), linear-gradient(#af67e9, #6565e7);
+  padding: 10rem 1.75rem 5rem 1.75rem; }
+
+main {
+  background: white;
+  position: relative;
+  height: 100%;
+  border-radius: 1.5rem;
+  padding: 1rem; }
+
+picture {
+  --size: 245px;
+  position: absolute;
+  top: -110px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  max-width: var(--size);
+  filter: drop-shadow(0 2rem 0rem rgba(108, 108, 228, 0.1)); }
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-block-start: 8rem; }
+
+.accordion {
+  margin-block-start: 1.5rem;
+  overflow: hidden; }
+
+.accordion-item {
+  overflow: hidden; }
+  .accordion-item > input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1; }
+    .accordion-item > input:checked + label {
+      font-weight: 700; }
+    .accordion-item > input:checked + label::after {
+      transform: rotate(0.5turn); }
+    .accordion-item > input:checked ~ .accordion-content {
+      max-height: 100vh;
+      padding-block-end: 0.75rem; }
+  .accordion-item > label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0.75rem;
+    cursor: pointer;
+    font-size: 13px; }
+    .accordion-item > label:is(:hover, :focus-visible) {
+      color: #f47c57; }
+    .accordion-item > label::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: url(../../images/icon-arrow-down.svg);
+      background-repeat: no-repeat;
+      transition: all 0.25s; }
+
+.accordion-content {
+  max-height: 0;
+  transition: linear 0.25s;
+  border-bottom: 1px solid #e7e7e9; }
+
+@media (min-width: 600px) {
+  body {
+    background: url(../../images/bg-pattern-desktop.svg), linear-gradient(#af67e9, #6565e7);
+    padding: 7.5rem 10rem; }
+    body::before {
+      content: '';
+      position: absolute;
+      z-index: 99;
+      left: 2.5rem;
+      top: 44%;
+      width: 191px;
+      height: 180px;
+      background-image: url(../../images/illustration-box-desktop.svg); }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 5rem 8rem;
+    overflow: hidden; }
+
+  picture {
+    --size: 472px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    margin: auto 0; }
+
+  .heading {
+    padding: 0;
+    text-align: left; }
+
+  .accordion label {
+    font-size: 1rem; }
+  .accordion-content {
+    font-size: 0.8125rem; } }
+@media (min-width: 1500px) {
+  .heading {
+    font-size: 3rem; }
+
+  .accordion label {
+    font-size: 1.5rem; }
+  .accordion-content {
+    font-size: 1.25rem; } }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,50 @@
+/*
+Error: Invalid CSS after "...d-color: colors": expected ";", was ".$divider;"
+        on line 26 of styles/SCSS/styles.scss
+
+21: /* Variables *\/
+22: 
+23: $d: 1rem;
+24: 
+25: body {
+26:     background-color: colors.$divider;
+27: }
+
+Backtrace:
+styles/SCSS/styles.scss:26
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:815:in `block in try_declaration'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:1284:in `rethrow'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:820:in `try_declaration'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:743:in `declaration_or_ruleset'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:708:in `block_child'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:697:in `block_contents'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:689:in `block'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:681:in `ruleset'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:707:in `block_child'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:700:in `block_contents'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:137:in `stylesheet'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/scss/parser.rb:41:in `parse'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:294:in `watch'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/plugin.rb:109:in `method_missing'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/home/sam/gems/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/home/sam/gems/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/home/sam/gems/bin/sass:25:in `load'
+/home/sam/gems/bin/sass:25:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...d-color: colors\": expected \";\", was \".$divider;\"\A         on line 26 of styles/SCSS/styles.scss\A \A 21: /* Variables */\A 22: \A 23: $d: 1rem;\A 24: \A 25: body {\A 26:     background-color: colors.$divider;\A 27: }"; }
